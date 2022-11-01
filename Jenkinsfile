@@ -16,7 +16,6 @@ pipeline {
         stage("Upload"){
             steps{
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',accessKeyVariable: 'AWS_ACCESS_KEY_ID',credentialsId:'tfuser',secretKeyVariable:'AWS_SECRET_ACCESS_KEY']]) {
-                sh "aws s3 ls"
                 sh "aws s3 cp /var/lib/jenkins/workspace/buildjob/target/Elasticbeanstalk-example-0.0.1-SNAPSHOT.war s3://jenkinsbuildtoufiq"
                }    
             }
