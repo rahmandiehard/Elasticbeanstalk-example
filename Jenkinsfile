@@ -4,7 +4,7 @@ pipeline {
         stage('clone') {
             steps {
                 // Get  code from a GitHub repository
-                git url: 'https://github.com/rahmandiehard/Elasticbeanstalk-example.git', branch: 'master'
+                git url: 'https://github.com/rahmandiehard/MavenProject.git', branch: 'master'
              
             }
         }
