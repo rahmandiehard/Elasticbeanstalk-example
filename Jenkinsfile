@@ -3,12 +3,11 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                // Get  code from a GitHub repository
                 git url: 'https://github.com/rahmandiehard/MavenProject.git', branch: 'master'
              
             }
         }
-        stage('Build') {
+        stage('BuildProject') {
             steps {
              sh "mvn clean install spring-boot:repackage"
              
