@@ -7,10 +7,10 @@ pipeline {
                 git url: 'https://github.com/rahmandiehard/Elasticbeanstalk-example.git', branch: 'master'
              
             }
-        }   // abc
-           // stage('Build') {
-            // steps {
-               // sh "mvn clean install"
+        }
+           stage('Build') {
+           steps {
+           sh "mvn clean install"
              
             //}
         //}
